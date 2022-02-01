@@ -20,5 +20,5 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Sync to airtable
-        run: ruby .github/workflows/airtable_sync.rb ${{github.repository}} ${{ github.event.number }}
+        run: ruby ${{ github.workspace }}/.github/workflows/airtable_sync.rb ${{github.repository}} ${{ github.event.number }}
 
