@@ -19,10 +19,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Print current PR
-        run: ${{ github.event.number }}
-
-      # # Runs a single command using the runners shell
-      # - name: Sync to airtable
-      #   run: .github/workflows/airtable_sync.rb
+      - name: Sync to airtable
+        run: .github/workflows/airtable_sync.rb ${{github.repository}} ${{ github.event.number }}
 
