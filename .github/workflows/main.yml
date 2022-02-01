@@ -24,7 +24,7 @@ jobs:
           bundler-cache: false
 
       - name: List files in the repository
-        run: ls 
+        run: ls ${{ github.workspace }} 
 
       - name: Sync to airtable
         run: ruby ${{ github.workspace }}/.github/workflows/airtable_sync.rb ${{github.repository}} ${{ github.event.number }}
