@@ -11,7 +11,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   airtable:
-    if: github.repository == "makersacademy/chitter-challenge-apprenticeships"
+    if: github.repository == 'makersacademy/chitter-challenge-apprenticeships'
     runs-on: ubuntu-latest
     container: ruby:3.1.0
 
