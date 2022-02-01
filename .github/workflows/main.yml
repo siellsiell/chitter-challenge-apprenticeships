@@ -19,6 +19,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+
       - name: Sync to airtable
         run: ruby ${{ github.workspace }}/.github/workflows/airtable_sync.rb ${{github.repository}} ${{ github.event.number }}
 
